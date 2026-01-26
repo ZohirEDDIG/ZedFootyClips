@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+	--color-primary: #12181b;
+	--color-secondary: #22c55e;
+	--color-tertiary: #2a2e35;
+}
+
+@layer components {
+	.sort-option {
+		@apply bg-tertiary text-gray-400 px-4 py-2 rounded-full flex items-center gap-x-1 cursor-pointer select-none transition hover:bg-tertiary/50
+	}
+}
+
+body {
+	background-color: var(--color-primary);
+	font-family: 'Mozilla Text', sans-serif;
+    overflow-x: hidden;
+}
+
+.green-drop-shadow:hover {
+	filter: drop-shadow(0 0 0.75rem var(--color-secondary));
+}
+
+.purple-drop-shadow:hover {
+	filter: drop-shadow(0 0 0.75rem var(--color-purple-300));
+	border-color: var(--color-purple-400);
+}
+
+button {
+	cursor: pointer;
+	user-select: none;
+}
+
+a {
+	user-select: none;
+}
