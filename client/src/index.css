@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import 'tailwindcss';
 
 @theme {
@@ -9,13 +9,14 @@
 
 @layer components {
 	.sort-option {
-		@apply bg-tertiary text-gray-400 px-4 py-2 rounded-full flex items-center gap-x-1 cursor-pointer select-none transition hover:bg-tertiary/50
+		@apply bg-tertiary text-gray-400 px-4 py-2 rounded-full flex items-center gap-x-1 font-semibold cursor-pointer select-none transition hover:bg-tertiary/50
 	}
 }
 
 body {
 	background-color: var(--color-primary);
-	font-family: 'Mozilla Text', sans-serif;
+	font-family: "Indie Flower", cursive;
+	font-weight: 600;
     overflow-x: hidden;
 }
 

@@ -17,7 +17,7 @@ export default function ClipsProvider ({ children }) {
     }, [getClipsQuery.isSuccess]);
 
     function search (query) {
-        if (!query.trim()) return;
+        if (!query.trim()) setClips(getClipsQuery.data.data.clips); 
         const filtered = getClipsQuery.data.data.clips.filter((clip) =>
             clip.description.toLowerCase().includes(query.toLowerCase())
         );

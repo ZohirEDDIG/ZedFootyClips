@@ -6,7 +6,7 @@ export default function Hero () {
     const { getClipsQuery } = useClips();
 
     return (
-        <main className='w-screen h-[calc(100dvh-64px)] sm:h-[calc(100dvh-72px)]'>
+        <main className='w-screen h-[calc(100dvh-112px)] sm:h-[calc(100dvh-72px)]'>
 
             <div className='w-full h-full container mx-auto p-4 flex flex-col lg:flex-row items-center justify-center gap-x-30 gap-y-6'>
 
@@ -28,7 +28,7 @@ export default function Hero () {
 
                     </p>
 
-                    <Link to='/clips' className='w-fit bg-secondary text-white text-xl sm:text-2xl px-2 py-1.5 mx-auto rounded-lg transition hover:bg-secondary/50'>
+                    <Link to='/clips' className='w-fit bg-secondary text-white sm:text-xl px-2 py-1.5 mx-auto rounded-lg transition hover:bg-secondary/50'>
                         
                         Explore Clips
                     

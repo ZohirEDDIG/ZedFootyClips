@@ -19,9 +19,7 @@ createRoot(document.getElementById('root')).render(
 				<App />
 				<Toaster
 					toastOptions={{ 
-						success: { style: toastStyle },
-						error: { style: toastStyle },
-						loading: { style: toastStyle }
+						style: toastStyle
 					}}
 				/>
 			</QueryClientProvider>
