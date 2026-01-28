@@ -35,7 +35,7 @@ export default function Clips () {
                             
                             clips.length === 0 
                             
-                            ?    <p className='text-gray-400 text-base sm:text-2xl font-bold text-center'>
+                            ?    <p className='text-gray-400 text-base sm:text-2xl font-bold font-open-sans text-center'>
 
                                 No clips found 
 
@@ -61,7 +61,7 @@ export default function Clips () {
                         
                         :   getClipsQuery.isError
 
-                        ?   <p className='text-gray-400 text-base sm:text-2xl font-bold text-center'>
+                        ?   <p className='text-gray-400 text-base sm:text-2xl font-open-sans  font-bold text-center'>
 
                                 Error: Something went wrong. Please refrsh the page or try again later.
 

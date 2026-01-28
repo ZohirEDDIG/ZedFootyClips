@@ -46,7 +46,7 @@ export default function NewsletterModal({ isOpen, onClose }) {
 			isOpen={isOpen}
 			onRequestClose={onClose}
 			overlayClassName='bg-primary/80 flex items-center justify-center fixed inset-0 z-50'
-			className='w-11/12 max-w-md bg-primary text-white p-6 rounded-lg relative outline-none'
+			className='w-11/12 max-w-md bg-primary text-white p-6 rounded-lg relative outline-none rounded-xl border border-white/5'
 		>
 			<button
 				onClick={onClose}
@@ -57,24 +57,24 @@ export default function NewsletterModal({ isOpen, onClose }) {
 
 			</button>
 
-			<h2 className='text-2xl font-semibold mb-2'>Stay updated ⚽</h2>
+			<h2 className='text-2xl font-semibold font-open-sans mb-2'>Stay updated ⚽</h2>
 
-			<p className='text-gray-300 mb-6 text-sm'>Get notified when new clips  are there.</p>
+			<p className='text-gray-300 mb-6 text-sm font-open-sans'>Get notified when new clips  are there.</p>
 
-			<form onSubmit={handleSubmit} className='flex flex-col gap-3'>
+			<form onSubmit={handleSubmit} className='flex flex-col gap-3' noValidate>
 
 				<input
 					type='email'
 					placeholder='Enter your email'
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
-					className='px-4 py-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500'
+					className='font-open-sans px-4 py-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500'
 				/>
 
 				<button
 					type='submit'
 					disabled={loading}
-					className={`px-4 py-2 rounded-md font-semibold transition ${loading ? 'bg-gray-600 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'}`}
+					className={`px-4 py-2 rounded-md font-semibold font-open-sans transition ${loading ? 'bg-gray-600 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'}`}
 				>
 
 					{loading ? 'Please wait...' : 'Subscribe'}

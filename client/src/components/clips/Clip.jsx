@@ -107,55 +107,53 @@ export default function Clip({ clip }) {
     });
 
 	return (
-		<div className='bg-tertiary p-4 rounded-md flex flex-col gap-y-3'>
+		<div className='bg-primary p-4 rounded-xl border border-white/5 flex flex-col gap-y-3 shadow-lg'>
 
-			<video
-				src={clip.clip}
-				poster={clip.poster}
-				controls
-				controlsList='nodownload'
-				className='aspect-video w-full'
-			/>
+			<div className='rounded-xl overflow-hidden'>
 
-			<p className='text-white line-clamp-1'>{clip.description}</p>
+				<video
+					src={clip.clip}
+					poster={clip.poster}
+					controls
+					controlsList='nodownload'
+					className='aspect-video w-full'
+				/>
 
-			<div className='flex items-center gap-x-4'>
-
-                <div className='flex items-center gap-x-2'>
-
-                    <button 
-                        type='button' 
-                        disabled={likeClipMutation.isPending || unlikeClipMutation.isPending}
-                        onClick={() => isClipLiked ? unlikeClipMutation.mutate() : likeClipMutation.mutate()}
-                        className='text-pink-400 text-xl cursor-pointer select-none transition hover:opacity-50'
-                    >
-
-                        { isClipLiked ? <FaHeart /> : <FaRegHeart /> }
-
-                    </button>
-                    
-                    <span className='text-gray-400 text-xs'>{clip.likes}</span>
-
-                </div>
-
-                <div className='flex items-center gap-x-2'>
-
-                    <button 
-                        type='button' 
-                        onClick={() => downloadClipMutation.mutate()}
-                        className='text-cyan-300 text-xl cursor-pointer select-none transition hover:opacity-50'
-                    >
-
-					<FaDownload />
-
-                    </button>
-                    
-                    <span className='text-gray-400 text-xs'>{clip.downloads}</span>
-
-                </div>
-				
 			</div>
 
+			<p className='text-gray-200 text-sm font-open-sans line-clamp-1'>{clip.description}</p>
+
+			<div className='flex items-center justify-between mt-2'>
+
+			<button
+				type='button'
+				disabled={likeClipMutation.isPending || unlikeClipMutation.isPending}
+				onClick={() => isClipLiked ? unlikeClipMutation.mutate() : likeClipMutation.mutate()}
+				className={`text-sm px-3 py-1.5  flex items-center gap-x-2 rounded-full transition-all 
+					${isClipLiked ? 'bg-pink-500/15 text-pink-400' : 'bg-white/5 text-gray-300 hover:bg-white/10'}`}
+			>
+
+				{isClipLiked ? <FaHeart /> : <FaRegHeart />}
+
+				<span className='text-xs font-open-sans'>{clip.likes}</span>
+
+			</button>
+
+			<button
+				type='button'
+				onClick={() => downloadClipMutation.mutate()}
+				className='bg-white/5 text-gray-300 text-sm px-3 py-1.5 rounded-full flex items-center gap-x-2 hover:bg-white/10 transition-all'
+			>
+
+				<FaDownload />
+
+				<span className='text-xs font-open-sans'>{clip.downloads}</span>
+
+			</button>
+
 		</div>
+
+	</div>
+
 	);
-}
+};

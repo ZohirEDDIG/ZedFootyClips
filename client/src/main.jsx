@@ -10,7 +10,7 @@ import './index.css';
 
 const queryClient = new QueryClient();
 
-const toastStyle  = { background: '#2a2e35', color: '#fff' };
+const toastStyle  = { background: '#2a2e35', color: '#fff', fontFamily: 'Open Sans' };
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>

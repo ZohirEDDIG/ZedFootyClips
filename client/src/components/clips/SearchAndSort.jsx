@@ -10,7 +10,7 @@ export default function SearchAndSort () {
 
             <div className='bg-tertiary text-white p-2 border border-gray-400 flex items-center gap-x-2 transition purple-drop-shadow'>
 
-                <button type='button' className='cursor-pointer select-none flex justify-center items-center'>
+                <button type='button' className='flex justify-center items-center'>
                     
                     <FaSearch />
                 
@@ -20,7 +20,7 @@ export default function SearchAndSort () {
                     type='text' 
                     placeholder='Search' 
                     onChange={(e) => search(e.target.value)} 
-                    className='text-white  placeholder:text-white  placeholder:text-xl placeholder:font-semibold flex-1 focus:outline-none' />
+                    className='text-white  placeholder:text-white  font-open-sans placeholder:font-semibold flex-1 focus:outline-none' />
 
                 <button type='button' className='w-6 h-6 border border-gray-400 rounded-md flex justify-center items-center'>/</button>
 
